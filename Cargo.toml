@@ -1,0 +1,35 @@
+[package]
+authors = ["tracyspacy"]
+edition = "2021"
+name = "nrf52811-solum-tag"
+version = "0.1.0"
+license = "MIT OR Apache-2.0"
+
+
+[dependencies]
+cortex-m = { version = "0.7.3", features = ["critical-section-single-core"] }
+cortex-m-rt = "0.7"
+embedded-hal = { version = "1.0.0" }
+embedded-hal-bus = "0.1.0"
+nrf52811-hal = { version = "0.18.0" }
+tinybmp = "0.6.0"
+epd-spectra = { git = "https://github.com/tracyspacy/epd-spectra.git" }
+profont = "0.7.0"
+embedded-graphics = "0.8.1"
+defmt = "0.3"
+defmt-rtt = "0.4"
+panic-probe = { version = "0.3", features = ["print-defmt"] }
+
+
+# cargo build/run
+[profile.dev]
+incremental = false
+codegen-units = 1
+debug = true
+lto = false
+
+# cargo build/run --release
+[profile.release]
+debug = true
+lto = true
+opt-level = "s"
