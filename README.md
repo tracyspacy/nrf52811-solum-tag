@@ -47,4 +47,9 @@ Pinout:
 ![IMG_9924](https://github.com/user-attachments/assets/a9bfbc6d-d773-4733-a7a0-96552e507f38)
 
 
+ ## Demo To-Do
  
+ - [x] Display text;
+ - [x] Display image (bmp);
+ - [ ] Activate 3 Leds;
+ - [ ] Enable wireless update; 
